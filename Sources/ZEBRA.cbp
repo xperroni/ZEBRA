@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ZEBRA" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../Build/Debug/ZEBRA" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../Build/Debug/Objects/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add directory="../../Clarus/Build/Debug" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="../Build/Release/ZEBRA" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../Build/Release/Objects/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add directory="../../Clarus/Build/Release" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="/usr/local/include" />
+			<Add directory="../../Clarus/Sources" />
+		</Compiler>
+		<Linker>
+			<Add option="-lclarus" />
+			<Add option="-lypspur" />
+			<Add option="-lscip2awd" />
+			<Add option="-lboost_filesystem" />
+			<Add option="-lboost_system" />
+			<Add option="-lboost_thread" />
+			<Add option="-lopencv_core" />
+			<Add option="-lopencv_features2d" />
+			<Add option="-lopencv_highgui" />
+			<Add option="-lopencv_imgproc" />
+			<Add option="-lopencv_nonfree" />
+			<Add option="-lopencv_photo" />
+			<Add option="-lopencv_video" />
+			<Add option="-Wl,--whole-archive -lpthread -Wl,--no-whole-archive" />
+		</Linker>
+		<Unit filename="assembler.cpp" />
+		<Unit filename="assembler.hpp" />
+		<Unit filename="dispatcher.cpp" />
+		<Unit filename="dispatcher.hpp" />
+		<Unit filename="domain.hpp" />
+		<Unit filename="extractor.cpp" />
+		<Unit filename="extractor.hpp" />
+		<Unit filename="parameters.cpp" />
+		<Unit filename="parameters.hpp" />
+		<Unit filename="sampler.cpp" />
+		<Unit filename="sampler.hpp" />
+		<Unit filename="zebra.cpp" />
+		<Unit filename="zebra.hpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
